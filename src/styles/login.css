@@ -1,0 +1,19 @@
+#login {
+  height: 100vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+button.login {
+  background: #1DB954;
+  padding: 7px 20px;
+  border-radius: 25px;
+}
+
+h2.title {
+  font-size: 50px;
+  margin-bottom: 25px;
+}
