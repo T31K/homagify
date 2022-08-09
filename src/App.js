@@ -1,9 +1,9 @@
 import { useEffect } from "react";
-import Login from "./components/Login";
 import { reducerCases } from "./utils/Constants";
 import { useStateProvider } from "./utils/StateProvider";
 import "./App.css";
-import MainContainer from "./components/MainContainer";
+import Login from "./components/auth/Login";
+import Main from "./components/Main";
 
 function App() {
   const [{ token }, dispatch] = useStateProvider();
@@ -18,9 +18,7 @@ function App() {
   }, [token, dispatch]);
 
   return (
-    <div className="App">
-      {token ? <MainContainer token={token} /> : <Login />}
-    </div>
+    <div className="App">{token ? <Main token={token} /> : <Login />}</div>
   );
 }
 
