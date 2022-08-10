@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import TopNav from "./navs/Topnav";
 import SideNav from "./navs/SideNav";
 import Container from "./app/Container";
 import axios from "axios";
@@ -27,6 +28,7 @@ export default function Main(props) {
   return (
     <>
       <div class="flex w-screen h-screen text-gray-700">
+        <TopNav />
         <SideNav />
         <Container />
       </div>

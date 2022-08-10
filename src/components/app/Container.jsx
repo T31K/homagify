@@ -3,9 +3,9 @@ import Layout from "./layout/Layout";
 
 export default function Container() {
   return (
-    <div class="flex flex-col flex-grow">
+    <main class="content">
       <Hero />
       <Layout />
-    </div>
+    </main>
   );
 }

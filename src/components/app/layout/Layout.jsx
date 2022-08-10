@@ -16,16 +16,19 @@ export default function Layout() {
   }, [token]);
 
   return (
-    <div class="flex-grow md:p-10 lg:p-8 overflow-auto" id="layout">
-      <div class="grid grid-cols-6 gap-6">
-        {playlists
-          ? playlists.playlists.items.map((item) => (
-              <div class="col-span-1 bg-white rounded-lg p-6 card">
-                <img src={item.images[0].url} alt="" />
-                <h1 class="text-center font-semibold mt-4">{item.name}</h1>
-              </div>
-            ))
-          : null}
+    <div class="main-header">
+      <div class="main-title">
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-3 mx-4">
+          {playlists
+            ? playlists.playlists.items.map((item, key) => (
+                <div class="col-span-1 bg-white rounded-lg p-6 card" key={key}>
+                  <img src={item.images[0].url} alt="" />
+                  <h1 class="text-center font-semibold mt-4">{item.name}</h1>
+                </div>
+              ))
+            : null}
+        </div>
+        <button>hello</button>
       </div>
     </div>
   );
