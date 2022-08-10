@@ -3,6 +3,7 @@
 ### Project Screenshots
 
 <img src="https://raw.githubusercontent.com/T31K/homagify/master/src/assets/project.png">
+
 ## Build Instructions
 
 ```
