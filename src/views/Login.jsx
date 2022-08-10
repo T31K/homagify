@@ -1,7 +1,11 @@
 export default function Login() {
   const handleClick = () => {
-    const clientId = `${process.env.REACT_APP_CLIENT_ID}`;
-    const clientSecret = `${process.env.REACT_APP_CLIENT_SECRET}`;
+    const clientId = `${
+      process.env.REACT_APP_CLIENT_ID || process.env.CLIENT_ID
+    } `;
+    const clientSecret = `${
+      process.env.REACT_APP_CLIENT_SECRET || process.env.CLIENT_SECRET
+    } `;
     const redirectUrl = "http://localhost:3000/";
     const apiUrl = "https://accounts.spotify.com/authorize";
     const scope = [
