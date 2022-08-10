@@ -1,17 +1,18 @@
 import { useEffect, useState } from "react";
+import { useLocation, Routes, Route } from "react-router-dom";
 import fetchData from "../../../utils/fetchData";
 import { useStateProvider } from "../../../utils/StateProvider";
 
 export default function Layout() {
   const [{ token }] = useStateProvider();
   const [playlists, setPlaylists] = useState();
+  const path = window.location.pathname.substring(1);
 
   useEffect(() => {
     const fetch = async () => {
-      const data = await fetchData.featuredPlaylist(token);
+      const data = await fetchData({ path, token });
       setPlaylists(data);
     };
-
     fetch().catch(console.error);
   }, [token]);
 

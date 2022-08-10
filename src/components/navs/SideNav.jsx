@@ -4,15 +4,7 @@ export default function SideNav() {
       <ul>
         <li>
           {" "}
-          <a class="sidenav-list-item" href="#0">
-            {" "}
-            <i class="fas fa-home icon"></i>
-            <em>Dashboard</em>
-          </a>
-        </li>
-        <li>
-          {" "}
-          <a class="sidenav-list-item" href="#0">
+          <a class="sidenav-list-item" href="/featured">
             {" "}
             <i class="fas fa-user icon"></i>
             <em>Users</em>
@@ -20,7 +12,7 @@ export default function SideNav() {
         </li>
         <li>
           {" "}
-          <a class="sidenav-list-item" href="#0">
+          <a class="sidenav-list-item" href="/new_releases">
             {" "}
             <i class="fas fa-tasks icon"></i>
             <em>Projects</em>
