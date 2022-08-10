@@ -1,7 +1,9 @@
 import { useEffect } from "react";
 import { reducerCases } from "./utils/Constants";
 import { useStateProvider } from "./utils/StateProvider";
-import "./App.css";
+import "./App.scss";
+import "./styles/login.css";
+
 import Login from "./components/auth/Login";
 import Main from "./components/Main";
 
@@ -17,9 +19,7 @@ function App() {
     }
   }, [token, dispatch]);
 
-  return (
-    <div className="App">{token ? <Main token={token} /> : <Login />}</div>
-  );
+  return <div className="App">{token ? <Main /> : <Login />}</div>;
 }
 
 export default App;
