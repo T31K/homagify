@@ -16,6 +16,8 @@ export default function Login() {
       "user-read-currently-playing",
     ].join(" ");
 
+    console.log(process.env.CLIENT_ID);
+    console.log(clientId);
     window.location.href = `${apiUrl}?client_id=${clientId}&redirect_uri=${redirectUrl}&scope=${scope}&response_type=token&show_dialog=true}`;
   };
 
